@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="CSS/styles.css" />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="images/logo.svg" alt="Logo image" class="header__logo-img" />
+      </div>
+
+      <div class="header__navigation">
+        <ul class="header__navigation__list">
+          <li class="header__navigation__list--item">
+            Features
+            <span>
+              <svg class="icon icon-angle-up"><use xlink:href="images/sprite.svg#icon-angle-up"></use></svg>
+              <svg class="icon icon-angle-down invisible"><use xlink:href="images/sprite.svg#icon-angle-down"></use></svg>
+            </span>
+            <ul class="header__common__list header__features__list invisible">
+              <li class="header__features__list--item">
+                <span>
+                  <svg class="icon">
+                    <use xlink:href="images/sprite.svg#icon-todo"></use>
+                  </svg>
+                </span>
+                <span class="header__features__list--item-para">Todo List</span>
+              </li>
+              <li class="header__features__list--item">
+                <span>
+                  <svg class="icon">
+                    <use xlink:href="images/sprite.svg#icon-calendar"></use>
+                  </svg>
+                </span>
+                <span class="header__features__list--item-para">Calendar</span>
+              </li>
+              <li class="header__features__list--item">
+                <span>
+                  <svg class="icon">
+                    <use xlink:href="images/sprite.svg#icon-reminders"></use>
+                  </svg>
+                </span>
+                <span class="header__features__list--item-para">Reminders</span>
+              </li>
+              <li class="header__features__list--item">
+                <span>
+                  <svg class="icon">
+                    <use xlink:href="images/sprite.svg#icon-planning"></use>
+                  </svg>
+                </span>
+                <span class="header__features__list--item-para">Planning</span>
+              </li>
+            </ul>
+          </li>
+          <li class="header__navigation__list--item">
+            Company
+            <span>
+              <svg class="icon icon-angle-up"><use xlink:href="images/sprite.svg#icon-angle-up"></use></svg>
+            </span>
+            
+            <ul class="header__common__list  header__company__list invisible">
+              <li class="header__company__list--item">History</li>
+              <li class="header__company__list--item">Our Team</li>
+              <li class="header__company__list--item">Blog</li>
+            </ul>
+          </li>
+          <li class="header__navigation__list--item">Careers</li>
+          <li class="header__navigation__list--item">About</li>
+        </ul>
+      </div>
+
+      <div class="header__button">
+        <a href="#" class="header__button--link header__button--login">Login</a>
+        <a href="#" class="header__button--link header__button--register">Register</a>
+      </div>
+    </header>
+
+
+    <section class="intro">
+      <div class="intro__description">
+        <h1 class="intro__description__heading">
+          Make remote work
+        </h1>
+        <p class="intro__description__para">
+          Get your team in sync, no matter your location. Streamline
+          processes, create team rituals, and watch productivity soar.
+        </p>
+
+        <div class="intro__description__button">Learn more</div>
+
+        <ul class="intro__description__clients">
+          <li class="intro__description__clients--item">
+            <img src="images/client-databiz.svg" alt="client1" class="intro__description__clients--img">
+          </li>
+          <li class="intro__description__clients--item">
+            <img src="images/client-audiophile.svg" alt="client2" class="intro__description__clients--img">
+          </li>
+          <li class="intro__description__clients--item">
+            <img src="images/client-meet.svg" alt="client4" class="intro__description__clients--img">
+          </li>
+          <li class="intro__description__clients--item">
+            <img src="images/client-maker.svg" alt="client3" class="intro__description__clients--img">
+          </li>
+          
+        </ul>
+      </div>
+      <div class="intro__image">
+        <picture>
+          <source
+            media="(min-width:800px)"
+            srcset="images/image-hero-desktop.png"
+          />
+          <source
+            media="(max-width:500px)"
+            srcset="images/image-hero-mobile.png"
+          />
+          <img
+            src="images/image-hero-desktop.png"
+            alt="hero image"
+            class="intro__image__main"
+          />
+        </picture>
+        
+      </div>
+    </section>
+      
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
