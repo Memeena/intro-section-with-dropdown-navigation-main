@@ -3,25 +3,38 @@
 const arrowUp = document.querySelectorAll('.icon-angle-up');
 const arrowDown = document.querySelectorAll('.icon-angle-down');
 const featuresList = document.querySelector('.header__features__list');
+const companyList = document.querySelector('.header__company__list');
 
-const showDropDown = function () {
+const showDropDown = function (i) {
     console.log('Showing dropdown');
-    arrowUp.style.transition = "all 2s";
-    featuresList.classList.toggle('invisible');
-    arrowDown.classList.toggle('invisible');
-    arrowUp.classList.toggle('invisible');
+    arrowDown[i].classList.toggle('invisible');
+    arrowUp[i].classList.toggle('invisible');
 }
 
-const hideDropDown = function () {
+const hideDropDown = function (i) {
     console.log('Hiding dropdown');
-    featuresList.classList.toggle('invisible');
-    arrowDown.classList.toggle('invisible');
-    arrowUp.classList.toggle('invisible');
+    
+    arrowDown[i].classList.toggle('invisible');
+    arrowUp[i].classList.toggle('invisible');
 }
 
-
-arrowUp.addEventListener('click', function () {
-    console.log('arrow clicked');
-    showDropDown();
+console.log(arrowUp);
+const chkTab = function (i) {
+    i === 0 ? featuresList.classList.toggle('invisible') :
+        companyList.classList.toggle('invisible');
+}
+arrowUp.forEach((icon,i) => {
+icon.addEventListener('click', function () {
+    chkTab(i);
+    showDropDown(i);
 });
-arrowDown.addEventListener('click', hideDropDown);
+// arrowDown.addEventListener('click', hideDropDown);    
+})
+
+arrowDown.forEach((icon, i) => {
+    icon.addEventListener('click', function () {
+        chkTab(i);
+        hideDropDown(i);
+   }) 
+});
+
