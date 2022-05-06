@@ -24,6 +24,10 @@ html {
     color: rgba(105, 105, 105, 0.8);
     font-weight: 500;
     cursor: pointer; }
+    .header__navigation__list--link {
+      text-decoration: none;
+      cursor: pointer;
+      color: inherit; }
     .header__navigation__list--item {
       position: relative;
       display: flex;
@@ -92,22 +96,24 @@ html {
 
 .intro {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 5rem 10rem; }
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: space-between;
+  padding: 2rem 10rem; }
   .intro__description {
     display: grid;
-    grid-template-rows: min-content min-content 6rem 1fr;
+    grid-template-rows: min-content min-content clamp(3rem, 5vw, 6rem) 1fr;
     grid-gap: 2rem;
-    padding: 5rem; }
+    padding: 12rem 5rem;
+    padding-bottom: 0; }
     .intro__description__heading {
-      font-size: 7.8rem;
+      font-size: clamp(3rem, 5vw, 7.8rem);
       font-weight: 700; }
     .intro__description__para {
-      font-size: 1.8rem;
+      font-size: clamp(1.2rem, 5vw, 1.8rem);
       font-weight: 500;
       color: dimgray;
       line-height: 1.5;
-      padding: 2.5rem 0;
+      padding: 3rem 0;
       padding-right: 3.6rem; }
     .intro__description__button {
       justify-self: start;
@@ -126,18 +132,16 @@ html {
         border: 2px solid #141414; }
     .intro__description__clients {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       grid-column-gap: 3rem;
       justify-items: center;
       align-self: end;
-      padding-top: 12rem;
       list-style: none; }
       .intro__description__clients img {
-        height: 2.5rem; }
+        height: clamp(1.5rem, 10vw, 2.5rem); }
   .intro__image {
     padding: 0 5rem; }
     .intro__image__main {
-      display: inline-block;
-      width: 100%;
-      height: 60rem;
+      max-width: 100%;
+      height: 100%;
       object-fit: contain; }

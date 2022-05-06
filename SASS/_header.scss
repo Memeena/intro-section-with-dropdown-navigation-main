@@ -7,6 +7,7 @@
 
   &__navigation {
     &__list {
+      
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -15,7 +16,12 @@
       color: rgba($color-medium-gray, 0.8);
       font-weight: $font-weight-500;
       cursor: pointer;
-
+      
+      &--link{
+        text-decoration: none;
+        cursor: pointer;
+        color: inherit;
+      }
       &--item {
         position: relative;
         display: flex;
