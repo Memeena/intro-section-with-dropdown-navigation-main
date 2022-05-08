@@ -28,81 +28,112 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__logo">
-        <img src="images/logo.svg" alt="Logo image" class="header__logo-img" />
-      </div>
+      <nav class="nav">
+        <div class="nav__logo">
+          <img src="images/logo.svg" alt="Logo image" class="nav__logo-img" />
+        </div>
 
-      <div class="header__navigation">
-        <ul class="header__navigation__list">
-          <li class="header__navigation__list--item">
-            <a class="header__navigation__list--link" href="#">Features</a>
-            <span>
-              <svg class="icon icon-angle-up"><use xlink:href="images/sprite.svg#icon-angle-up"></use></svg>
+        <button
+          aria-controls="nav__tabs"
+          aria-expanded="false"
+          class="nav__mobile"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
 
-              <svg class="icon icon-angle-down invisible"><use xlink:href="images/sprite.svg#icon-angle-down"></use></svg>
+        <div data-visible="false" class="nav__tabs grid">
+          <div class="nav__primary">
+            <ul class="nav__list flex list-style-none">
+              <li class="nav__item">
+                <a href="#" class="nav__link"
+                  >Features<span>
+                    <svg class="icon icon-angle-up">
+                      <use xlink:href="images/sprite.svg#icon-angle-up"></use>
+                    </svg>
 
-            </span>
-            <ul class="header__common__list header__features__list invisible">
-              <li class="header__features__list--item">
-                <span>
-                  <svg class="icon">
-                    <use xlink:href="images/sprite.svg#icon-todo"></use>
-                  </svg>
-                </span>
-                <span class="header__features__list--item-para">Todo List</span>
+                    <svg class="icon icon-angle-down invisible">
+                      <use xlink:href="images/sprite.svg#icon-angle-down"></use>
+                    </svg>
+                  </span>
+                  <ul class="nav__features invisible">
+                    <li class="nav__features--item">
+                      <span>
+                        <svg class="icon">
+                          <use xlink:href="images/sprite.svg#icon-todo"></use>
+                        </svg>
+                      </span>
+                      <span class="nav__features--item-para">Todo List</span>
+                    </li>
+                    <li class="nav__features--item">
+                      <span>
+                        <svg class="icon">
+                          <use
+                            xlink:href="images/sprite.svg#icon-calendar"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="nav__features--item-para">Calendar</span>
+                    </li>
+                    <li class="nav__features--item">
+                      <span>
+                        <svg class="icon">
+                          <use
+                            xlink:href="images/sprite.svg#icon-reminders"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="nav__features--item-para">Reminders</span>
+                    </li>
+                    <li class="nav__features--item">
+                      <span>
+                        <svg class="icon">
+                          <use
+                            xlink:href="images/sprite.svg#icon-planning"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="nav__features--item-para">Planning</span>
+                    </li>
+                  </ul>
+                </a>
               </li>
-              <li class="header__features__list--item">
-                <span>
-                  <svg class="icon">
-                    <use xlink:href="images/sprite.svg#icon-calendar"></use>
-                  </svg>
-                </span>
-                <span class="header__features__list--item-para">Calendar</span>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link"
+                  >Company<span>
+                    <svg class="icon icon-angle-up">
+                      <use xlink:href="images/sprite.svg#icon-angle-up"></use>
+                    </svg>
+
+                    <svg class="icon icon-angle-down invisible">
+                      <use xlink:href="images/sprite.svg#icon-angle-down"></use>
+                    </svg>
+                  </span>
+                  <ul class="nav__company invisible">
+                    <li class="nav__company--item">History</li>
+                    <li class="nav__company--item">Our Team</li>
+                    <li class="nav__company--item">Blog</li>
+                  </ul>
+                </a>
               </li>
-              <li class="header__features__list--item">
-                <span>
-                  <svg class="icon">
-                    <use xlink:href="images/sprite.svg#icon-reminders"></use>
-                  </svg>
-                </span>
-                <span class="header__features__list--item-para">Reminders</span>
+
+              <li class="nav__item">
+                <a class="nav__link" href="#">Careers</a>
               </li>
-              <li class="header__features__list--item">
-                <span>
-                  <svg class="icon">
-                    <use xlink:href="images/sprite.svg#icon-planning"></use>
-                  </svg>
-                </span>
-                <span class="header__features__list--item-para">Planning</span>
-              </li>
+
+              <li class="nav__item"><a class="nav__link" href="#">About</a></li>
             </ul>
-          </li>
-          <li class="header__navigation__list--item">
-            <a class="header__navigation__list--link" href="#">Company</a>
-            <span>
-              <svg class="icon icon-angle-up"><use xlink:href="images/sprite.svg#icon-angle-up"></use></svg>
-              <svg class="icon icon-angle-down invisible"><use xlink:href="images/sprite.svg#icon-angle-down"></use></svg>
-              
-            </span>
-            
-            <ul class="header__common__list  header__company__list invisible">
-              <li class="header__company__list--item">History</li>
-              <li class="header__company__list--item">Our Team</li>
-              <li class="header__company__list--item">Blog</li>
-            </ul>
-          </li>
-          <li class="header__navigation__list--item"><a class="header__navigation__list--link" href="#">Careers</a></li>
-          <li class="header__navigation__list--item"><a class="header__navigation__list--link" href="#">About</a></li>
-        </ul>
-      </div>
+          </div>
 
-      <div class="header__button">
-        <a href="#" class="header__button--link header__button--login">Login</a>
-        <a href="#" class="header__button--link header__button--register">Register</a>
-      </div>
+          <div class="nav__secondary flex">
+            <a href="#" class="btn nav__button--login">Login</a>
+            <a href="#" class="btn nav__button--register">Register</a>
+          </div>
+        </div>
+      </nav>
     </header>
-
-
+    <!-- 
+      
     <section class="intro">
       <div class="intro__description">
         <h1 class="intro__description__heading">
@@ -150,7 +181,7 @@
         
       </div>
     </section>
-      
+       -->
 
     <div class="attribution">
       Challenge by

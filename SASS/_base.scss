@@ -20,6 +20,41 @@ html {
   background-color: $color-almost-white;
 }
 
+.body {
+  overflow-x: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.btn {
+  border: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: $color-medium-gray;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  display: inline-block;
+
+  &:hover {
+    color: $color-almost-black;
+  }
+}
+
+.sr-only {
+  visibility: hidden;
+}
 // @media screen and (max-width: 75em) {
 //   font-size: 60%;
 // }

@@ -13,13 +13,13 @@
         padding-bottom: 0;
         
         &__heading{
-            font-size: clamp(3rem,5vw,7.8rem);
+            font-size: clamp(3rem,5.5vw,7.8rem);
             font-weight: $font-weight-700;
             // padding-right: 5rem;
         }
 
         &__para{
-            font-size: clamp(1.2rem,5vw,1.8rem);
+            font-size: clamp(1.2rem,1.5vw,1.8rem);
             font-weight: $font-weight-500;
             color:$color-medium-gray;
             line-height: 1.5;
