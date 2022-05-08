@@ -213,13 +213,18 @@
       display: block;
       position: absolute;
       z-index: 9999;
-      width: 2rem;
+      width: 3rem;
       aspect-ratio: 1;
       top: 2rem;
       right: 2rem;
       border: 0;
-      background: url("../images/icon-menu.svg");
+      background-color: transparent;
+      background-image: url("../images/icon-menu.svg");
       background-repeat: no-repeat;
+
+      &[aria-expanded="true"] {
+        background-image: url("../images/icon-close-menu.svg");
+      }
     }
   }
 }
