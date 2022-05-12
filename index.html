@@ -41,30 +41,34 @@
           <span class="sr-only">Menu</span>
         </button>
 
+        <div class="overlay hidden"></div>
+
         <div data-visible="false" class="nav__tabs grid">
           <div class="nav__primary">
             <ul class="nav__list flex list-style-none">
-              <li class="nav__item">
-                <a href="#" class="nav__link"
-                  >Features<span>
-                    <svg class="icon icon-angle-up">
+              <li class="nav__item flex">
+                <a href="#" class="nav__link flex nav__link__features"
+                  >Features
+                  <span>
+                    <svg class="icon icon-angle-up hidden">
                       <use xlink:href="images/sprite.svg#icon-angle-up"></use>
                     </svg>
 
-                    <svg class="icon icon-angle-down invisible">
+                    <svg class="icon icon-angle-down">
                       <use xlink:href="images/sprite.svg#icon-angle-down"></use>
                     </svg>
-                  </span>
-                  <ul class="nav__features invisible">
-                    <li class="nav__features--item">
-                      <span>
+                  </span></a>
+
+                  <ul class="nav__features list-style-none ">
+                    <li class="nav__features--item grid">
+                      <span class="nav__features--item-icon">
                         <svg class="icon">
                           <use xlink:href="images/sprite.svg#icon-todo"></use>
                         </svg>
                       </span>
                       <span class="nav__features--item-para">Todo List</span>
                     </li>
-                    <li class="nav__features--item">
+                    <li class="nav__features--item grid">
                       <span>
                         <svg class="icon">
                           <use
@@ -74,17 +78,17 @@
                       </span>
                       <span class="nav__features--item-para">Calendar</span>
                     </li>
-                    <li class="nav__features--item">
-                      <span>
+                    <li class="nav__features--item grid">
+                      <span class="nav__features--item-icon">
                         <svg class="icon">
                           <use
                             xlink:href="images/sprite.svg#icon-reminders"
                           ></use>
                         </svg>
                       </span>
-                      <span class="nav__features--item-para">Reminders</span>
+                      <span class="nav__features--item-para ">Reminders</span>
                     </li>
-                    <li class="nav__features--item">
+                    <li class="nav__features--item grid">
                       <span>
                         <svg class="icon">
                           <use
@@ -98,23 +102,23 @@
                 </a>
               </li>
 
-              <li class="nav__item">
-                <a href="#" class="nav__link"
+              <li class="nav__item flex ">
+                <a href="#" class="nav__link flex "
                   >Company<span>
-                    <svg class="icon icon-angle-up">
+                    <svg class="icon icon-angle-up hidden">
                       <use xlink:href="images/sprite.svg#icon-angle-up"></use>
                     </svg>
 
-                    <svg class="icon icon-angle-down invisible">
+                    <svg class="icon icon-angle-down">
                       <use xlink:href="images/sprite.svg#icon-angle-down"></use>
                     </svg>
-                  </span>
-                  <ul class="nav__company invisible">
+                  </span></a>
+                  <ul class="nav__company list-style-none">
                     <li class="nav__company--item">History</li>
                     <li class="nav__company--item">Our Team</li>
                     <li class="nav__company--item">Blog</li>
                   </ul>
-                </a>
+              
               </li>
 
               <li class="nav__item">

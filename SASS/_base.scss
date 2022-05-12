@@ -26,7 +26,7 @@ html {
 
 .flex {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 .grid {
@@ -54,6 +54,29 @@ html {
 
 .sr-only {
   visibility: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.hidden {
+  display: none !important;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+}
+
+.spcl-padding {
+  transform: translateX(0.5rem);
 }
 // @media screen and (max-width: 75em) {
 //   font-size: 60%;
