@@ -1,6 +1,3 @@
-.header {
-}
-
 .nav {
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -15,8 +12,8 @@
     align-items: center;
   }
 
-  &__primary {
-  }
+  // &__primary {
+  // }
 
   &__mobile {
     display: none;

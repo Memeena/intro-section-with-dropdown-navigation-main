@@ -1,73 +1,144 @@
-.intro{
+.intro {
+  &__description {
     display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: min-content min-content clamp(3rem, 5vw, 6rem) 1fr;
+    grid-gap: 2rem;
     justify-content: space-between;
-    padding:2rem 10rem;
+    padding: 5rem clamp(2rem, 10vw, 10rem);
 
-    &__description{
-        // flex:0 0 50%;
+    // padding: 12rem 5rem;
+    // padding-bottom: 0;
+
+    &__heading {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      font-size: clamp(3rem, 5.5vw, 7.8rem);
+      font-weight: $font-weight-700;
+      // padding-right: 5rem;
+    }
+
+    &__para {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+      font-weight: $font-weight-500;
+      color: $color-medium-gray;
+      line-height: 1.5;
+      padding: 3rem 0;
+      padding-right: 3.6rem;
+    }
+
+    &__button {
+      grid-row: 3/4;
+      grid-column: 1/2;
+
+      justify-self: start;
+      border: none;
+      border-radius: 1rem; //since the browser may have some value by default
+      font-size: 1.8rem;
+      padding: 2rem 3rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      background-color: $color-almost-black;
+      display: block;
+      color: $color-almost-white;
+
+      &:hover {
+        background-color: $color-almost-white;
+        color: $color-almost-black;
+        border: 2px solid $color-almost-black;
+      }
+    }
+
+    &__clients {
+      grid-row: 4/5;
+      grid-column: 1/2;
+      justify-self: end;
+      align-self: flex-end;
+
+      &--list {
         display: grid;
-        grid-template-rows: min-content min-content clamp(3rem,5vw,6rem) 1fr ;
-        grid-gap: 2rem;
-        padding: 12rem 5rem;
-        padding-bottom: 0;
-        
-        &__heading{
-            font-size: clamp(3rem,5.5vw,7.8rem);
-            font-weight: $font-weight-700;
-            // padding-right: 5rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-column-gap: 3rem;
+        justify-items: center;
+        align-items: center;
+        align-self: end;
+        list-style: none;
+
+        img {
+          height: clamp(1rem, 10vw, 2.5rem);
+          // filter: brightness(50%);
         }
+      }
+    }
+  }
 
-        &__para{
-            font-size: clamp(1.2rem,1.5vw,1.8rem);
-            font-weight: $font-weight-500;
-            color:$color-medium-gray;
-            line-height: 1.5;
-            padding:3rem 0;
-            padding-right: 3.6rem;
-        }
+  &__image {
+    grid-row: 1/-1;
+    grid-column: 2/3;
 
-        &__button{
-            justify-self: start;
-            border: none;
-            border-radius: 1rem;   //since the browser may have some value by default
-            font-size: 1.8rem;
-            padding: 2rem 3rem;
-            cursor:pointer;
-            transition: all .2s;
-            background-color: $color-almost-black;
-            display: block;
-            color: $color-almost-white;
+    padding: 0 5rem;
+    &__main {
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
 
-            &:hover{
-                background-color: $color-almost-white;
-                color:$color-almost-black;
-                border:2px solid $color-almost-black;
-            }
-        }
+.client-icon {
+  width: 6rem;
+  height: 3rem;
+}
 
-        &__clients{
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0,1fr));
-            grid-column-gap: 3rem;
-            justify-items: center;
-            align-self: end;
-            list-style: none;
+@media screen and (max-width: 58rem) {
+  .intro {
+    &__description {
+      grid-template-rows: repeat(5, min-content);
+      grid-template-columns: none;
+      gap: clamp(1rem, 10vw, 4rem);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
 
-            img{
-                height: clamp(1.5rem,10vw,2.5rem);
-                // filter: brightness(50%);
-            }
-        }
+      &__heading {
+        grid-row: 2/3;
+        grid-column: 1/2;
+      }
+
+      &__para {
+        grid-row: 3/4;
+        grid-column: 1/2;
+      }
+
+      &__button {
+        grid-row: 4/5;
+        grid-column: 1/2;
+        justify-self: center;
+      }
+
+      &__clients {
+        grid-row: 5/6;
+        grid-column: 1/2;
+      }
     }
 
-    &__image{
-        padding: 0 5rem;
-        &__main{
-            max-width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        
+    &__image {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      padding: 0;
+      &__img {
+        object-fit: cover;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  .intro {
+    &__description {
+      padding: 0;
+    }
+  }
 }
