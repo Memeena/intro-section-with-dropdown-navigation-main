@@ -42,7 +42,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(4px);
   z-index: -1;
   transition: all 0.5s; }
@@ -154,7 +154,7 @@ html {
     padding: Min(30vh, 8rem) 2rem;
     z-index: 1000;
     transform: translateX(100%);
-    transition: transform 320ms ease-out; }
+    transition: transform 520ms ease-out; }
     .nav__tabs[data-visible="true"] {
       transform: translateX(0%); }
   .nav__list {

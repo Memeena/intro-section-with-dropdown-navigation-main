@@ -58,9 +58,6 @@
       align-self: flex-end;
 
       &--list {
-        // display: grid;
-        // grid-template-columns: repeat(4, minmax(0, 1fr));
-        // grid-column-gap: 3rem;
         display: flex;
         gap: 2rem;
         justify-items: center;
@@ -70,7 +67,6 @@
 
         img {
           height: clamp(1rem, 10vw, 2.5rem);
-          // filter: brightness(50%);
         }
       }
     }

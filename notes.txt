@@ -1,0 +1,16 @@
+1. Min,max and clamp.
+The fontsize and padding have been given the values by giving the min of two values by using min function or by using the clamp function where it specifies the min,max and middle values.
+
+2. While using the grid, min-content and max-content is used.
+	- min-content is used for header-logo 
+        - max-content is used for the layout in feature sub-menu.
+	- the main intro section is designed as grid layout where the image alone is spanned in the left whereas the rest are in the right layout as per design.
+
+3. In Javascript, 
+	- usage data atrributes for mobile menu (data-visible) and to specify which tab is clicked (data-item - For the feature sub-menu, data-item value as 1 and company sub-menu data-item value as 2). 
+	- usage of closest to get the nearest attribute where the data-item is specified.
+
+Acknowledgments
+
+1. Kevin powell 
+2. 
