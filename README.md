@@ -11,12 +11,8 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -65,8 +61,6 @@ This challenge taught me the following:
 - In Javascript,
   - usage of 'data atrributes' for mobile menu (data-visible) and to specify which tab is clicked (data-item - For the feature sub-menu, data-item value as 1 and company sub-menu data-item value as 2).
   - usage of 'closest' to get the nearest attribute where the data-item is specified.
-
-### Continued development
 
 ### Useful resources
 
