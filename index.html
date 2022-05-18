@@ -15,7 +15,6 @@
 
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -45,21 +44,21 @@
 
         <div data-visible="false" class="nav__tabs grid">
           <div class="nav__primary">
-            <ul class="nav__list flex list-style-none">
+            <ul class="nav__list flex list-style-none menu-container">
               <li class="nav__item flex">
-                <a href="#" class="nav__link flex nav__link__features"
+                <a href="#" class="nav__link flex nav__link__features" data-item = "1"
                   >Features
                   <span>
-                    <svg class="icon icon-angle-up hidden">
+                    <svg class="icon icon-angle-up feautre-up-icon hidden">
                       <use xlink:href="images/sprite.svg#icon-angle-up"></use>
                     </svg>
 
-                    <svg class="icon icon-angle-down">
+                    <svg class="icon icon-angle-down feature-down-icon">
                       <use xlink:href="images/sprite.svg#icon-angle-down"></use>
                     </svg>
                   </span></a>
 
-                  <ul class="nav__features list-style-none ">
+                  <ul class="nav__features list-style-none" >
                     <li class="nav__features--item grid">
                       <span class="nav__features--item-icon">
                         <svg class="icon">
@@ -103,7 +102,7 @@
               </li>
 
               <li class="nav__item flex ">
-                <a href="#" class="nav__link flex "
+                <a href="#" class="nav__link flex" data-item = "2"
                   >Company<span>
                     <svg class="icon icon-angle-up hidden">
                       <use xlink:href="images/sprite.svg#icon-angle-up"></use>
@@ -152,45 +151,36 @@
         <div class="intro__description__clients">
         <ul class="intro__description__clients--list">
           <li class="intro__description__clients--item">
-                    <span class="intro__description__clients--img">
-                        <svg class="client-icon">
-                          <use
-                            xlink:href="images/sprite.svg#client-databiz"
-                          ></use>
-                        </svg>
-                      </span>
-              
+              <span class="intro__description__clients--img">
+                <svg class="client-icon">
+                  <use xlink:href="images/sprite.svg#client-databiz"></use>
+                </svg>
+              </span>
           </li>
           <li class="intro__description__clients--item">
             <span class="intro__description__clients--img">
-                        <svg class="client-icon">
-                          <use
-                            xlink:href="images/sprite.svg#client-audiophile"
-                          ></use>
-                        </svg>
-                      </span>
+              <svg class="client-icon">
+                <use xlink:href="images/sprite.svg#client-audiophile"></use>
+              </svg>
+            </span>
           </li>
           <li class="intro__description__clients--item">
             <span class="intro__description__clients--img">
-                        <svg class="client-icon">
-                          <use
-                            xlink:href="images/sprite.svg#client-meet"
-                          ></use>
-                        </svg>
-                      </span>
+              <svg class="client-icon">
+                <use xlink:href="images/sprite.svg#client-meet"></use>
+              </svg>
+            </span>
           </li>
           <li class="intro__description__clients--item">
             <span class="intro__description__clients--img">
-                        <svg class="client-icon">
-                          <use
-                            xlink:href="images/sprite.svg#client-maker"
-                          ></use>
-                        </svg>
-                      </span>
+              <svg class="client-icon">
+                <use xlink:href="images/sprite.svg#client-maker"></use>
+              </svg>
+            </span>
           </li>
           
         </ul>
-        </div>
+      </div>
     
       <div class="intro__image">
         <picture>
@@ -208,18 +198,17 @@
             class="intro__image__main"
           />
         </picture>
-        
       </div>
-        </div>
-    </section>
+     </div>
+  </section>
       
 
-    <div class="attribution">
+  <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
-    <script src="script.js"></script>
+      >. Coded by <a href="#">Meenakshi</a>.
+  </div>
+  <script src="script.js"></script>
   </body>
 </html>

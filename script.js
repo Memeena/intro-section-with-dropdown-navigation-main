@@ -6,14 +6,23 @@ const overlay = document.querySelector(".overlay");
 
 const arrowUp = document.querySelectorAll(".icon-angle-up");
 const arrowDown = document.querySelectorAll(".icon-angle-down");
-const featuresList = document.querySelector(".nav__features");
-const companyList = document.querySelector(".nav__company");
-const mediaSize = 600;
 
+const featureArrowUp = document.querySelector(".feature-up-icon");
+const featureArrowDown = document.querySelector(".feature-down-icon");
+const featuresList = document.querySelector(".nav__features");
+
+const companyArrowUp = document.querySelector(".company-up-icon");
+const companyArrowDown = document.querySelector(".company-down-icon");
+const companyList = document.querySelector(".nav__company");
+const menuContainer = document.querySelector(".menu-container");
+
+let featureClicked = false,
+  companyClicked = false;
+
+//Displaying mobile menu
 mobileMenu.addEventListener("click", () => {
   const visibility = navTab.getAttribute("data-visible");
 
-  console.log(visibility);
   if (visibility === "false") {
     navTab.setAttribute("data-visible", true);
     mobileMenu.setAttribute("aria-expanded", true);
@@ -25,47 +34,52 @@ mobileMenu.addEventListener("click", () => {
   }
 });
 
-const chkTab = function (i) {
-  i === 0
-    ? featuresList.classList.toggle("hidden")
-    : companyList.classList.toggle("hidden");
+//Initial values for the sub menu
+const init = function () {
+  featuresList.classList.add("hidden");
+  companyList.classList.add("hidden");
 };
 
-const showDropDown = function (i) {
-  console.log("Showing dropdown");
-  console.log(arrowDown[i].classList);
-  console.log(arrowUp[i].classList);
+//Function to toggle arrow icons
+const toggleArrowIcon = function (i) {
   arrowDown[i].classList.toggle("hidden");
   arrowUp[i].classList.toggle("hidden");
-  console.log(arrowDown[i].classList);
-  console.log(arrowUp[i].classList);
 };
 
-const hideDropDown = function (i) {
-  console.log("Hiding dropdown");
-  console.log(arrowDown[i].classList);
-  console.log(arrowUp[i].classList);
-  arrowDown[i].classList.toggle("hidden");
-  arrowUp[i].classList.toggle("hidden");
-  console.log(arrowDown[i].classList);
-  console.log(arrowUp[i].classList);
-};
+init();
 
-arrowUp.forEach((icon, i) => {
-  icon.addEventListener("click", function () {
-    if (window.innerWidth <= mediaSize) {
-      console.log("Less than inner width");
-      chkTab(i);
-      showDropDown(i);
-    }
-  });
-});
+//Displaying the sub menu
+menuContainer.addEventListener("click", function (e) {
+  e.preventDefault();
 
-arrowDown.forEach((icon, i) => {
-  icon.addEventListener("click", function () {
-    if (window.innerWidth <= mediaSize) {
-      chkTab(i);
-      hideDropDown(i);
+  //Checking which tab is clicked
+  const tab = e.target.closest(".nav__link").getAttribute("data-item");
+
+  //Guard clause
+  if (!tab) return;
+
+  if (tab === "1") {
+    //Closing feature sub menu if open already
+    if (featureClicked) {
+      featuresList.classList.add("hidden");
+      featureClicked = false;
+    } else {
+      //Opening feature sub menu
+      featuresList.classList.remove("hidden");
+      featureClicked = true;
     }
-  });
+  } else if (tab === "2") {
+    //Closing company sub menu if open already
+    if (companyClicked) {
+      companyList.classList.add("hidden");
+      companyClicked = false;
+    } else {
+      //Opening company sub menu
+      companyList.classList.remove("hidden");
+      companyClicked = true;
+    }
+  }
+
+  // Toggle the arrow icon when the tab is clicked.
+  toggleArrowIcon(tab - 1);
 });
